@@ -14,7 +14,6 @@ html,body{
   position: relative;
 }
 
-
 #logo-space{
   min-width: 100%;
   max-width: 100%;
@@ -33,6 +32,118 @@ html,body{
   box-shadow: 0 0 13px black;
 }
 
+#modal{
+  box-sizing: border-box;
+  padding: 14px;
+  display: flex;
+  justify-content:baseline;
+  transition: 0.3s;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  min-width: 80vw;
+  height: fit-content;
+  max-height: 90%;
+  background-color: rgb(216, 216, 216);
+  z-index: 7;
+}
+
+#modal-text{
+  font-size: 22px;
+}
+
+#modal-title{
+  text-align: center;
+  align-self: center;
+  font-family:Verdana, Geneva, Tahoma, sans-serif ;
+  font-size: 1.8em;
+}
+
+#modal-button{
+  position: relative;
+  background-color: rgb(21, 21, 21);
+  color: aliceblue;
+  border: none;
+  width: 200px;
+  height: 40px;
+  margin: 8px;
+  font-size: 1.1em;
+}
+
+
+#modal > img{
+  align-self: left;
+  margin: 14px 65% 14px 14px;
+  width: 200px;
+  height: 300px;
+}
+
+#fade.show{
+  opacity: 1;
+}
+
+#fade{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgb(0, 0, 0, 0.6);
+  z-index: 5;
+}
+
+#modal-text{
+  font-size: 22px;
+}
+
+#modal-button-comprar{
+  background-color:rgba(11,11,11,11);
+  color: aliceblue;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  width: 200px;
+  height: 60px
+}
+
+#purchase-menu{
+  user-select: none;
+  justify-content:center;
+  position: relative;
+  left: 100%;
+  bottom: 91%;
+  max-width: 68%;
+  min-height: 80%;
+  max-height: 100%;
+  display: flex;
+  background-color: rgb(194, 194, 194);
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.42);
+}
+
+#purchase-menu > input{
+  margin: 10px;
+  height: 26px;
+  border: 0px;
+}
+
+espaco{
+  box-sizing: border-box;
+  padding: 10px;
+  display: block;
+  align-items: left;
+  justify-content: left;
+  max-width:60%;
+  max-height:90%;
+  background-color: rgb(228, 228, 228);
+}
+
+
+espaco > img{
+  margin-top: 4px;
+  width: 200px;
+  height: 300px;
+}
 
 
 
@@ -121,7 +232,7 @@ post{
   font-size: 1.3em;
 }
 
-.buttons{
+.buttonsComprar{
   border: 0px;
   background-color: rgb(11, 11, 11);
   cursor: pointer;
@@ -148,7 +259,7 @@ post{
   height: 60px;
 }
 
-.buttons:hover{
+.buttonsComprar:hover{
   border: 1px solid black;
   transition: 0.3s;
   background-color: rgb(255, 255, 255);
