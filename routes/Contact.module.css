@@ -1,0 +1,38 @@
+h2{
+  margin: 5px auto;
+  padding: 0px;
+  text-align: center;
+  font-size: 3em;
+  letter-spacing: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.displayInfo{
+  margin: auto;
+  background-color: rgba(38, 38, 38, 0.118);
+  padding: 20px;
+  display: flex;
+  min-width:50%;
+  max-width: 74%;
+  flex-wrap: wrap;
+  font: bold;
+  letter-spacing: 1.5px;
+  font-size: 1.6em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#Cosmos{
+  max-height: 450px;
+}
+#cosmosSpace{
+  margin: 0  0 0 3%;
+  background-color: rgba(95, 95, 95, 0.118);
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  padding: 12px;
+  width: 90%;
+  height: 50%;
+}

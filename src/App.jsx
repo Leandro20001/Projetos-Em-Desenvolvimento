@@ -1,12 +1,29 @@
 import Botao from "./components/ButtonComponent"
 import Footter from "./components/fotter"
 
+
+
 function App(){
   return(
    <div className="App">
 
-     <div className="content">
-       <h1>L-ivros</h1>
+
+       <header>
+
+       <div id="logo-space">
+         <span>L-ivros</span>
+         <img id="logo"src="../images/book_icon.PNG" alt="" />
+       </div>
+
+        <div className="nav">
+          <a href=".">Contato</a>
+          <a href=".">Novidades</a>
+          <a href=".">Carrinho</a>
+          <a href=".">Cadastrar-se</a>
+        </div>
+
+       </header>
+
        <p>Sugestoes</p>
 
        <div className="Grid_Books">
@@ -33,7 +50,6 @@ function App(){
        
        
        </div>
-     </div>
      <Footter/>
    </div>
    

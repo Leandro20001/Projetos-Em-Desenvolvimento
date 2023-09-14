@@ -1,17 +1,17 @@
-import { StyleHTMLAttributes } from "react"
+
+import React from "react"
+import { Navigate, useNavigate } from "react-router-dom"
+
+
 
 function Botao(){
 
-    function eventoBotao(){
+    const navigate = useNavigate();
         return(
-            alert('Tudo Certinho')
+            <>
+                <button className="buttonsSobre" onClick={()=>{navigate('/contact')}}>Sobre</button>
+            </>
+            
         )
     }
-
-
-    return(
-        <button className="buttonsSobre" onClick={eventoBotao}>Sobre</button>
-      
-    )
-}
 export default Botao
