@@ -7,21 +7,24 @@ html,body{
   
 }
 
+.App{
+  margin: 0;
+}
+
 #logo{
   width: 95px;
   height: 95px;
-  margin:0 0 0 0px;
+  margin:0;
   position: relative;
 }
 
 #logo-space{
-  min-width: 100%;
-  max-width: 100%;
+  width: 100vw;
   max-height: 300px;
   box-sizing: border-box;
+  padding: 4px;
   background-color: rgba(14, 13, 13, 0.891);
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.673);
-  padding: 14px;
   color: aliceblue;
   user-select: none;
   text-align: left;
@@ -31,121 +34,38 @@ html,body{
   align-self: left;
   box-shadow: 0 0 13px black;
 }
+.hide{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
 #modal{
+  opacity: 1;
+  transition: 1s;
   box-sizing: border-box;
-  padding: 14px;
+  padding: 6px;
+  margin: 0 16px 16px 16px;
   display: flex;
-  justify-content:baseline;
   transition: 0.3s;
-  position: fixed;
+  position:fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
   min-width: 80vw;
   height: fit-content;
-  max-height: 90%;
+  max-height: 95%;
   background-color: rgb(216, 216, 216);
   z-index: 7;
 }
 
-#modal-text{
-  font-size: 22px;
-}
-
-#modal-title{
-  text-align: center;
-  align-self: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif ;
-  font-size: 1.8em;
-}
-
-#modal-button{
-  position: relative;
-  background-color: rgb(21, 21, 21);
-  color: aliceblue;
-  border: none;
-  width: 200px;
-  height: 40px;
-  margin: 8px;
-  font-size: 1.1em;
-}
-
-
-#modal > img{
-  align-self: left;
-  margin: 14px 65% 14px 14px;
-  width: 200px;
-  height: 300px;
-}
-
-#fade.show{
-  opacity: 1;
-}
-
-#fade{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color:rgb(0, 0, 0, 0.6);
-  z-index: 5;
-}
-
-#modal-text{
-  font-size: 22px;
-}
-
-#modal-button-comprar{
-  background-color:rgba(11,11,11,11);
-  color: aliceblue;
-  font-size: 1.2em;
-  font-weight: bold;
-  letter-spacing: 2px;
-  width: 200px;
-  height: 60px
-}
-
-#purchase-menu{
-  user-select: none;
-  justify-content:center;
-  position: relative;
-  left: 100%;
-  bottom: 91%;
-  max-width: 68%;
-  min-height: 80%;
-  max-height: 100%;
-  display: flex;
-  background-color: rgb(194, 194, 194);
-  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.42);
-}
-
-#purchase-menu > input{
-  margin: 10px;
-  height: 26px;
-  border: 0px;
-}
-
-espaco{
-  box-sizing: border-box;
-  padding: 10px;
+espaco > p#modal-text{
   display: block;
-  align-items: left;
-  justify-content: left;
-  max-width:60%;
-  max-height:90%;
-  background-color: rgb(228, 228, 228);
+  font-size:18px;
+  max-height: fit-content;
+  background-color: aqua;
+  grid-area: 2;
 }
-
-
-espaco > img{
-  margin-top: 4px;
-  width: 200px;
-  height: 300px;
-}
-
-
 
 header{
   width: 100%;
@@ -161,21 +81,22 @@ header{
 header > div.nav{
   display: flex;
   height: fit-content;
-  margin: 0px 0 40px;
+  margin:auto;
   padding: 0px;
   color: black;
   justify-content: left;
   flex-wrap: wrap;
 }
-header > div.nav>a{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 650;
-  font-size: 1.2em;
-  background-color: rgba(181, 181, 181, 0.484);
-  margin: 10px;
-  padding: 4px;
-  color: black;
-  text-decoration: none;
+header > div.nav>input{
+  border-radius: 20px;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  border: 1px grey solid;
+  width: 70vw;
+  font-size: 18px;
+  margin: 6px auto;
+  padding: 8px 8px 8px 16px;
+  
 }
 
 
@@ -183,8 +104,7 @@ p{
   user-select: none;
   text-align: center;
   letter-spacing: 2px;
-  margin-top: 10px;
-  margin-bottom: 0px;
+  margin: 16px;
   padding: 0px;
   font-weight: bolder;
   font-size: 1.5em;
@@ -192,13 +112,15 @@ p{
 }
 
 .Grid_Books{
+  display:grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 5%;
+  flex-wrap: wrap;
   box-sizing: border-box;
   padding: 30px;
-  display: flex;
-  justify-content:center;
-  margin-top: 20px;
-  width: 98vw;
-  height: 500px;
+  margin:auto auto 24px auto;
+  width: 100%;
+  height: 150vh;
   background-color: rgba(197, 197, 197, 0.426);
   box-shadow:0 0 7px rgba(0, 0, 0, 0.503);
   border-radius: 0 0 30px 30px;
@@ -208,21 +130,18 @@ p{
 .books{
   user-select: none;
   box-sizing: border-box;
-  padding: 14px 0 14px 0;
+  padding: 14px;
   text-align: center;
   margin: 10px;
   border-radius: 6px;
   max-height: 60%;
-  min-width: 30.5%;
-  background-color: rgba(194, 194, 194, 0.445);
+  background-color: rgba(232, 232, 232, 0.032);
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.422);
 }
 
 .books img{
-  min-height: 120px;
-  min-width: 120px ;
-  max-width: 100%;
-  max-height: 100%;
+  width: 160px;
+  height: 100%;
   margin-bottom: 16px;
 }
 
@@ -275,12 +194,13 @@ post{
 
 footer{
   text-align: center;
-  position: relative;
+  position:absolute;
+  right: 0;
+  left: 0;
+  bottom: -99vh;
   background-color: rgb(0, 0, 0);
   color: aliceblue;
-  margin: 2% 0 0 0;
   width: 100%;
-  height: 100%;
-  top: 100%;
-  padding: 20px 0;
+  height: 80px;
+  margin: 0;
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-import Contact from '../routes/contact.jsx'
 import './index.css'
 
 /////importa o browser router do react////
@@ -14,12 +13,6 @@ const router = createBrowserRouter([
   {
     path:"App",
     element:<App/>
-  },
-
-
-  {
-    path:"Contact",
-    element:<Contact/>
   }
 ])
 
